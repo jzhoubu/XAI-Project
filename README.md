@@ -29,11 +29,11 @@ My current work is based on [utkuozbulak](https://github.com/utkuozbulak/pytorch
             <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/CAM/bike_4.jpg"> </td>
         </tr>
          <tr>
-            <td align="center">  <b>Original image</b> </td>
-            <td align="left"> <b>Probs</b>: 0.670<br /> <b>Class</b>: {mountain bike, all-terrain bike, off-roader}
-            <td align="left"> <b>Probs</b>: 0.138<br /> <b>Class</b>: {bicycle-built-for-two, tandem bicycle, tandem}
-            <td align="left"> <b>Probs</b>: 0.066<br /> <b>Class</b>: {unicycle, monocycle}
-            <td align="left"> <b>Probs</b>: 0.045<br /> <b>Class</b>: {seashore, coast, seacoast, sea-coast}
+            <td align="center" valign="top">  <b>Original image</b> </td>
+            <td align="left" valign="top"> <b>Probs</b>: 0.670<br /> <b>Class</b>: {mountain bike, all-terrain bike, off-roader}
+            <td align="left" valign="top"> <b>Probs</b>: 0.138<br /> <b>Class</b>: {bicycle-built-for-two, tandem bicycle, tandem}
+            <td align="left" valign="top"> <b>Probs</b>: 0.066<br /> <b>Class</b>: {unicycle, monocycle}
+            <td align="left" valign="top"> <b>Probs</b>: 0.045<br /> <b>Class</b>: {seashore, coast, seacoast, sea-coast}
     </tbody>
 </table>
 
