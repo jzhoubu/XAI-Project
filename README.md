@@ -22,12 +22,11 @@ My current work is based on [utkuozbulak](https://github.com/utkuozbulak/pytorch
 <table border=0 >
     <tbody>
         <tr>
-            <td width="10%" align="center"> Class Activation Mapping(CAM) </td>
-            <td width="18%" > <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/CAM/bike_0.jpg"> </td>
-            <td width="18%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/CAM/bike_1.jpg"> </td>
-            <td width="18%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/CAM/bike_2.jpg"> </td>
-            <td width="18%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/CAM/bike_3.jpg"> </td>
-            <td width="18%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/CAM/bike_4.jpg"> </td>
+            <td width="20%" > <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/CAM/bike_0.jpg"> </td>
+            <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/CAM/bike_1.jpg"> </td>
+            <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/CAM/bike_2.jpg"> </td>
+            <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/CAM/bike_3.jpg"> </td>
+            <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/CAM/bike_4.jpg"> </td>
         </tr>
          <tr>
             <td>  </td>
