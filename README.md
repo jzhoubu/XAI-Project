@@ -22,7 +22,7 @@ My current work is based on [utkuozbulak](https://github.com/utkuozbulak/pytorch
 <table border=0 >
     <tbody>
         <tr>
-            <td width="10%" align="center"> Class Activation Mapping </td>
+            <td width="10%" align="center"> Class Activation Mapping(CAM) </td>
             <td width="18%" > <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/CAM/bike_0.jpg"> </td>
             <td width="18%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/CAM/bike_1.jpg"> </td>
             <td width="18%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/CAM/bike_2.jpg"> </td>
@@ -31,20 +31,12 @@ My current work is based on [utkuozbulak](https://github.com/utkuozbulak/pytorch
         </tr>
          <tr>
             <td>  </td>
-            <td align="center"> Target class: King Snake (56) </td>
-            <td align="center"> Target class: Mastiff (243) </td>
-            <td align="center"> Target class: Spider (72)</td>
-            <td align="center"> Target class: Spider (72)</td>
-            <td align="center"> Target class: Spider (72)</td>
-        </tr>
-        <tr>
-            <td width="10%" align="center"> Colored Vanilla Backpropagation </td>
-            <td width="18%" > <img src="https://raw.githubusercontent.com/utkuozbulak/pytorch-cnn-visualizations/master/results/gradient_visualizations/snake_Vanilla_BP_color.jpg"> </td>
-            <td width="18%"> <img src="https://raw.githubusercontent.com/utkuozbulak/pytorch-cnn-visualizations/master/results/gradient_visualizations/cat_dog_Vanilla_BP_color.jpg"> </td>
-            <td width="18%"> <img src="https://raw.githubusercontent.com/utkuozbulak/pytorch-cnn-visualizations/master/results/gradient_visualizations/spider_Vanilla_BP_color.jpg"> </td>
-            <td width="18%"> <img src="https://raw.githubusercontent.com/utkuozbulak/pytorch-cnn-visualizations/master/results/gradient_visualizations/spider_Vanilla_BP_color.jpg"> </td>
-            <td width="18%"> <img src="https://raw.githubusercontent.com/utkuozbulak/pytorch-cnn-visualizations/master/results/gradient_visualizations/spider_Vanilla_BP_color.jpg"> </td>
-        </tr>
+            <td align="center">  <b>Original image</b> </td>
+            <td align="left"> <b>Probs</b>: 0.670<br /> <b>Class</b>: {mountain bike, all-terrain bike, off-roader}
+            <td align="left"> <b>Probs</b>: 0.138<br /> <b>Class</b>: {bicycle-built-for-two, tandem bicycle, tandem}
+            <td align="left"> <b>Probs</b>: 0.066<br /> <b>Class</b>: {unicycle, monocycle}
+            <td align="left"> <b>Probs</b>: 0.045<br /> <b>Class</b>: {seashore, coast, seacoast, sea-coast}
+
     </tbody>
 </table>
 
