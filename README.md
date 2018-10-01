@@ -36,7 +36,6 @@ My current work is based on [utkuozbulak](https://github.com/utkuozbulak/pytorch
             <td align="left"> <b>Probs</b>: 0.138<br /> <b>Class</b>: {bicycle-built-for-two, tandem bicycle, tandem}
             <td align="left"> <b>Probs</b>: 0.066<br /> <b>Class</b>: {unicycle, monocycle}
             <td align="left"> <b>Probs</b>: 0.045<br /> <b>Class</b>: {seashore, coast, seacoast, sea-coast}
-
     </tbody>
 </table>
 
