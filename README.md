@@ -6,14 +6,15 @@ My current work is based on [utkuozbulak](https://github.com/utkuozbulak/pytorch
 
 
 
-## Doing
-- Organizing CNN visualizer
-
-
-## To Do List
-- to add README file to CAM
-- to seek a small dataset containing clear image to train
-- to seek a way to visualize while training
+## Summary
+- Doing 
+    - Organizing CNN visualizer
+        + CAM(done)
+        + Saliency Maps
+- To Do
+    -  to add README file to CAM
+    - to seek a small dataset containing clear image to train
+    - to seek a way to visualize while training
 
 ## Gallery
 
