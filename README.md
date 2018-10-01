@@ -29,7 +29,6 @@ My current work is based on [utkuozbulak](https://github.com/utkuozbulak/pytorch
             <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/CAM/bike_4.jpg"> </td>
         </tr>
          <tr>
-            <td>  </td>
             <td align="center">  <b>Original image</b> </td>
             <td align="left"> <b>Probs</b>: 0.670<br /> <b>Class</b>: {mountain bike, all-terrain bike, off-roader}
             <td align="left"> <b>Probs</b>: 0.138<br /> <b>Class</b>: {bicycle-built-for-two, tandem bicycle, tandem}
