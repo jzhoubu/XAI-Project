@@ -1,6 +1,6 @@
 # Convolutional Neural Network Visualizations
 
-# News
+## News
 - **Update(09/29/2018)**: Add CAM module
 
 
