@@ -38,7 +38,6 @@ My current work is based on [utkuozbulak](https://github.com/utkuozbulak/pytorch
         </tr>
         <tr>
             <td width="20%" > <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/CAM/HKUST_0.jpg"> </td>
-
             <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/CAM/HKUST_1.jpg"> </td>
             <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/CAM/HKUST_2.jpg"> </td>
             <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/CAM/HKUST_3.jpg"> </td>
@@ -50,6 +49,7 @@ My current work is based on [utkuozbulak](https://github.com/utkuozbulak/pytorch
             <td align="left" valign="top"> <b>Probs</b>: 0.098<br /> <b>Class</b>: {palace}
             <td align="left" valign="top"> <b>Probs</b>: 0.046<br /> <b>Class</b>: {bow}
             <td align="left" valign="top"> <b>Probs</b>: 0.045<br /> <b>Class</b>: {stupa, tope}
+        </tr>
     </tbody>
 </table>
 
