@@ -10,15 +10,14 @@ Read [Learning Deep Features for Discriminative Localization](https://arxiv.org/
 > eg. 以`densenet161`为例，其最后一个卷积层的输出的维度为(2208, 7, 7)。那么，在进行训练和预测的时候，(2208, 7, 7)通过GAP后维度变成(2208,1,1)再进入softmax层(2208,1000)输出分数。而在生成CAM的时候我们只关注某一个分类的权重W，维度为(2208,1)，这个W可以理解为filter对这个class预测的贡献的大小。用这个权重对2208个(7,7)的filter进行线性组合即得到CAM。
 
 ### 09/30/2018
+Read [Deep Inside Convolutional Networks: Visualising Image Classification Models and Saliency Maps](https://arxiv.org/abs/1312.6034) 
+
+> 用输出的score对input image（记为X）求导，导数记为W，维数与X相同。W取绝对值，取channel的最大值进行降维，可以作为一个mask套在原图上。这个操作可以取CNN网络的任意layer的output进行反向求导。paper的interpret是，将X展开成向量，将W作为泰勒展开式的一阶导。
+
+### 10/02/2018
+Reproduced Saliency Maps module
 
 
 
-### Learning Deep Features for Discriminative Localization([Link](https://arxiv.org/pdf/1512.04150.pdf))
-- **Code Demo**: https://github.com/metalbubble/CAM
-- **Contributions** of this work:
-    -  Weakly-supervised object localization
-    -   Visualizing CNNs    
-- **Related Work** worth mentioning: 
-    - [Visualizing and Understanding Convolutional Networks](https://cs.nyu.edu/~fergus/papers/zeilerECCV2014.pdf)  (to-do-list) uses deconvolutional network to visualize patterns each unit
 
 

@@ -2,8 +2,10 @@
 My current work is based on [utkuozbulak](https://github.com/utkuozbulak/pytorch-cnn-visualizations)'s work.
 
 ## News
-- **Update(09/29/2018)**: Add CAM module
-- **Update(10/01/2018)**: Add CAM example into Gallery
+- **Update(09/29/2018)**: Add Class Activation Maps module
+- **Update(10/01/2018)**: Add Class Activation Maps demo to Gallery
+- **Update(10/02/2018)**: Add Saliency Maps module
+- **Update(10/03/2018)**: Add Saliency Maps demo to Gallery
 
 
 ## Summary
