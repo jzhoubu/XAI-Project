@@ -20,7 +20,7 @@ My current work is based on [utkuozbulak](https://github.com/utkuozbulak/pytorch
 
 ## Gallery
 
-### Class Activation Mapping(CAM)
+### Class Activation Mapping[Link](https://arxiv.org/pdf/1512.04150.pdf)
 
 <table border=0 >
     <tbody>
@@ -55,7 +55,7 @@ My current work is based on [utkuozbulak](https://github.com/utkuozbulak/pytorch
     </tbody>
 </table>
 
-### Saliency Maps
+### Saliency Maps[Link](https://arxiv.org/abs/1312.6034)
 <table border=0 >
     <tbody>
         <tr>

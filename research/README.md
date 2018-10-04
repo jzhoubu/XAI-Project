@@ -12,7 +12,7 @@ Read [Learning Deep Features for Discriminative Localization](https://arxiv.org/
 ### 09/30/2018
 Read [Deep Inside Convolutional Networks: Visualising Image Classification Models and Saliency Maps](https://arxiv.org/abs/1312.6034) 
 
-> 用输出的score对input image（记为X）求导，导数记为W，维数与X相同。W取绝对值，取channel的最大值进行降维，可以作为一个mask套在原图上。这个操作可以取CNN网络的任意layer的output进行反向求导。paper的interpret是，将X展开成向量，将W作为泰勒展开式的一阶导。
+> 用输出的score对input image（记为X）求导，导数记为W，维数与X相同。W取绝对值，取channel的最大值进行降维，可以作为一个mask套在原图上。这个操作可以取CNN网络的任意layer的output进行反向求导。paper从泰勒展开式的角度阐述W的意义。
 
 ### 10/02/2018
 Reproduced Saliency Maps module
