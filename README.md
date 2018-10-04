@@ -92,9 +92,9 @@
 </table>
 
 ### Guided BackPropagation  [[Paper](https://arxiv.org/abs/1312.6034)]
-This part of work is based on [utkuozbulak](https://github.com/utkuozbulak/pytorch-cnn-visualizations)'s work. My contribution is as below:
-- Fix some bugs for up-to-date pytorch version
-- Solve problems on up-to-date CNN model, eg. ResNet, DenseNet
+This part of my work is based on [utkuozbulak](https://github.com/utkuozbulak/pytorch-cnn-visualizations)'s work. My contributions are listed as below:
+- Fix bugs for up-to-date pytorch version
+- Solve problems for up-to-date CNN model, eg. ResNet, DenseNet
 - Re-organize as a package
 
 <table border=0 >
