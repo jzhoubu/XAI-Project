@@ -96,34 +96,34 @@ My current work is based on [utkuozbulak](https://github.com/utkuozbulak/pytorch
     <tbody>
         <tr>
             <td width="20%" > <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/Snake_origin.jpg"> </td>
-            <td width="20%" align="left" valign="top"> <b>Describe</b>:  <br /> Guided BackPropagation
-            <td width="20%" align="left" valign="top"> <b>Describe</b>:  <br /> Guided BackPropagation with gray scale
-            <td width="20%" align="left" valign="top"> <b>Describe</b>:  <br /> Guided BackPropagation with only positive gradient
-            <td width="20%" align="left" valign="top"> <b>Describe</b>:  <br /> Guided BackPropagation with only negitive gradient
+            <td width="20%" align="center" valign="center">  Guided BackPropagation
+            <td width="20%" align="center" valign="center">  Guided BackPropagation with <b>gray scale</b>
+            <td width="20%" align="center" valign="center">  Guided BackPropagation with <b>positive gradient</b>
+            <td width="20%" align="center" valign="center">  Guided BackPropagation with <b>negitive gradient</b>
         </tr>
         <tr>
-            <td width="20%" align="left" valign="top"> <b>DenseNet 161</b>
+            <td width="20%" align="center" valign="center"> <b>DenseNet 161</b>
             <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/DenseNet161_Snake_norm.jpg"> </td>
             <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/DenseNet161_Snake_gray.jpg"> </td>
             <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/DenseNet161_Snake_pos.jpg"> </td>
             <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/DenseNet161_Snake_neg.jpg"> </td>
         </tr>
         <tr>
-            <td width="20%" align="left" valign="top"> <b>ResNet 152</b>
+            <td width="20%" align="center" valign="center"> <b>ResNet 152</b>
             <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/ResNet152_Snake_norm.jpg"> </td>
             <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/ResNet152_Snake_gray.jpg"> </td>
             <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/ResNet152_Snake_pos.jpg"> </td>
             <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/ResNet152_Snake_neg.jpg"> </td>
         </tr>
         <tr>
-            <td width="20%" align="left" valign="top"> <b>VGG16_bn</b>
+            <td width="20%" align="center" valign="center"> <b>VGG16_bn</b>
             <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/VGG16_bn_Snake_norm.jpg"> </td>
             <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/VGG16_bn_Snake_gray.jpg"> </td>
             <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/VGG16_bn_Snake_pos.jpg"> </td>
             <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/VGG16_bn_Snake_neg.jpg"> </td>
         </tr>
         <tr>
-            <td width="20%" align="left" valign="top"> <b>AlexNet</b>
+            <td width="20%" align="center" valign="center"> <b>AlexNet</b>
             <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/alexnet_Snake_norm.jpg"> </td>
             <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/alexnet_Snake_gray.jpg"> </td>
             <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/alexnet_Snake_pos.jpg"> </td>
