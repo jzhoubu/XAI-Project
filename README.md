@@ -6,6 +6,7 @@
 - **Update(10/02/2018)**: Add Saliency Maps module
 - **Update(10/03/2018)**: Add Saliency Maps demo to Gallery
 - **Update(10/04/2018)**: Add Guided BackPropagation module
+- **Update(10/04/2018)**: Add Guided BackPropagation demo to Gallery
 
 
 ## Summary
@@ -125,6 +126,13 @@ This part of work is based on [utkuozbulak](https://github.com/utkuozbulak/pytor
             <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/VGG16_bn_Snake_gray.jpg"> </td>
             <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/VGG16_bn_Snake_pos.jpg"> </td>
             <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/VGG16_bn_Snake_neg.jpg"> </td>
+        </tr>
+        <tr>
+            <td width="20%" align="center" valign="center"> <b>VGG16_bn</b>
+            <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/VGG16_Snake_norm.jpg"> </td>
+            <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/VGG16_Snake_gray.jpg"> </td>
+            <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/VGG16_Snake_pos.jpg"> </td>
+            <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/VGG16_Snake_neg.jpg"> </td>
         </tr>
         <tr>
             <td width="20%" align="center" valign="center"> <b>AlexNet</b>
