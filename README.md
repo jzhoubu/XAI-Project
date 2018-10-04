@@ -6,6 +6,7 @@ My current work is based on [utkuozbulak](https://github.com/utkuozbulak/pytorch
 - **Update(10/01/2018)**: Add Class Activation Maps demo to Gallery
 - **Update(10/02/2018)**: Add Saliency Maps module
 - **Update(10/03/2018)**: Add Saliency Maps demo to Gallery
+- **Update(10/04/2018)**: Add Guided BackPropagation module
 
 
 ## Summary
@@ -13,14 +14,15 @@ My current work is based on [utkuozbulak](https://github.com/utkuozbulak/pytorch
     - Organizing CNN visualizer
         + CAM(Done)
         + Saliency Maps(Done)
+        + Guided BackPropagation(Done)
 - To Do
-    -  to add README file to CAM
-    - to seek a small dataset containing clear image to train
+    - to add README file to VIS package
+    - to seek a small dataset containing clear image to train (removed)
     - to seek a way to visualize while training
 
 ## Gallery
 
-### Class Activation Mapping[Link](https://arxiv.org/pdf/1512.04150.pdf)
+### Class Activation Mapping  [[Paper](https://arxiv.org/pdf/1512.04150.pdf)]
 
 <table border=0 >
     <tbody>
@@ -55,7 +57,7 @@ My current work is based on [utkuozbulak](https://github.com/utkuozbulak/pytorch
     </tbody>
 </table>
 
-### Saliency Maps[Link](https://arxiv.org/abs/1312.6034)
+### Saliency Maps  [[Paper](https://arxiv.org/abs/1312.6034)]
 <table border=0 >
     <tbody>
         <tr>
@@ -88,6 +90,42 @@ My current work is based on [utkuozbulak](https://github.com/utkuozbulak/pytorch
         </tr>
     </tbody>
 </table>
+
+### Guided BackPropagation  [[Paper](https://arxiv.org/abs/1312.6034)]
+<table border=0 >
+    <tbody>
+        <tr>
+            <td width="20%" > <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/DenseNet161_Snake_origin.jpg"> </td>
+            <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/DenseNet161_Snake_norm.jpg"> </td>
+            <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/DenseNet161_Snake_gray.jpg"> </td>
+            <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/DenseNet161_Snake_pos.jpg"> </td>
+            <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/DenseNet161_Snake_neg.jpg"> </td>
+        </tr>
+         <tr>
+            <td align="center" valign="top">  <b>Original image</b>  <br />   <b>DenseNet 161</b>     </td>
+            <td align="left" valign="top">  <b>Describe</b>: {Guided BackPropagation}
+            <td align="left" valign="top"> <b>Describe</b>: {Guided BackPropagation with gray scale}
+            <td align="left" valign="top"> <b>Describe</b>: {Guided BackPropagation with only positive gradient}
+            <td align="left" valign="top"> <b>Describe</b>: {Guided BackPropagation with only negitive gradient}
+        </tr>
+        <tr>
+            <td width="20%" > <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/ResNet152_Snake_origin.jpg"> </td>
+            <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/ResNet152_Snake_norm.jpg"> </td>
+            <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/ResNet152_Snake_gray.jpg"> </td>
+            <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/ResNet152_Snake_pos.jpg"> </td>
+            <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/ResNet152_Snake_neg.jpg"> </td>
+        </tr>
+         <tr>
+            <td align="center" valign="top">  <b>Original image</b>  <br />   <b>ResNet 152</b>     </td>
+            <td align="left" valign="top">  <b>Describe</b>: {Guided BackPropagation}
+            <td align="left" valign="top"> <b>Describe</b>: {Guided BackPropagation with gray scale}
+            <td align="left" valign="top"> <b>Describe</b>: {Guided BackPropagation with only positive gradient}
+            <td align="left" valign="top"> <b>Describe</b>: {Guided BackPropagation with only negitive gradient}
+        </tr>
+    </tbody>
+</table>
+
+
 
 ## Related Work
 [utkuozbulak/pytorch-cnn-visualizations](https://github.com/utkuozbulak/pytorch-cnn-visualizations)
