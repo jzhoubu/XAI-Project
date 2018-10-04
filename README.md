@@ -95,33 +95,55 @@ My current work is based on [utkuozbulak](https://github.com/utkuozbulak/pytorch
 <table border=0 >
     <tbody>
         <tr>
-            <td width="20%" > <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/DenseNet161_Snake_origin.jpg"> </td>
+            <td width="20%" > <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/Snake_origin.jpg"> </td>
             <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/DenseNet161_Snake_norm.jpg"> </td>
             <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/DenseNet161_Snake_gray.jpg"> </td>
             <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/DenseNet161_Snake_pos.jpg"> </td>
             <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/DenseNet161_Snake_neg.jpg"> </td>
         </tr>
          <tr>
-            <td align="center" valign="top">  <b>Original image</b>  <br />   <b>DenseNet 161</b>     </td>
+            <td align="center" valign="top">   <b>DenseNet 161</b>     </td>
             <td align="left" valign="top">  <b>Describe</b>: {Guided BackPropagation}
             <td align="left" valign="top"> <b>Describe</b>: {Guided BackPropagation with gray scale}
             <td align="left" valign="top"> <b>Describe</b>: {Guided BackPropagation with only positive gradient}
             <td align="left" valign="top"> <b>Describe</b>: {Guided BackPropagation with only negitive gradient}
         </tr>
         <tr>
-            <td width="20%" > <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/ResNet152_Snake_origin.jpg"> </td>
+            <td width="20%" > <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/Snake_origin.jpg"> </td>
             <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/ResNet152_Snake_norm.jpg"> </td>
             <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/ResNet152_Snake_gray.jpg"> </td>
             <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/ResNet152_Snake_pos.jpg"> </td>
             <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/ResNet152_Snake_neg.jpg"> </td>
         </tr>
          <tr>
-            <td align="center" valign="top">  <b>Original image</b>  <br />   <b>ResNet 152</b>     </td>
+            <td align="center" valign="top">    <b>ResNet 152</b>     </td>
             <td align="left" valign="top">  <b>Describe</b>: {Guided BackPropagation}
             <td align="left" valign="top"> <b>Describe</b>: {Guided BackPropagation with gray scale}
             <td align="left" valign="top"> <b>Describe</b>: {Guided BackPropagation with only positive gradient}
             <td align="left" valign="top"> <b>Describe</b>: {Guided BackPropagation with only negitive gradient}
         </tr>
+        <tr>
+            <td width="20%" > <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/Snake_origin.jpg"> </td>
+            <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/VGG16_bn_Snake_norm.jpg"> </td>
+            <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/VGG16_bn_Snake_gray.jpg"> </td>
+            <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/VGG16_bn_Snake_pos.jpg"> </td>
+            <td width="20%"> <img src="https://github.com/sysu-zjw/XAI-Project/blob/master/images/GuidedBackPropagation/VGG16_bn_Snake_neg.jpg"> </td>
+        </tr>
+         <tr>
+            <td align="center" valign="top">    <b>ResNet 152</b>     </td>
+            <td align="left" valign="top">  <b>Describe</b>: {Guided BackPropagation}
+            <td align="left" valign="top"> <b>Describe</b>: {Guided BackPropagation with gray scale}
+            <td align="left" valign="top"> <b>Describe</b>: {Guided BackPropagation with only positive gradient}
+            <td align="left" valign="top"> <b>Describe</b>: {Guided BackPropagation with only negitive gradient}
+        </tr>
+
+
+
+
+
+
+
+
     </tbody>
 </table>
 
