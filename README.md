@@ -151,11 +151,8 @@ This part of work is based on [utkuozbulak](https://github.com/utkuozbulak/pytor
 
 [Sample code for the Class Activation Mapping](https://github.com/metalbubble/CAM)
 
-[Data of Places365](http://places2.csail.mit.edu/download.html)
-
 [Learning Deep Features for Discriminative Localization](http://cnnlocalization.csail.mit.edu/)
 
-[The Places365-CNNs for Scene Classification](https://github.com/CSAILVision/places365)
-
+[DeepTracker: Visualizing the Training Process of Convolutional Neural Networks](http://www.cse.ust.hk/~huamin/tist_2018_dongyu_deeptracker.pdf)
 
 
