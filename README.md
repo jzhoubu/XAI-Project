@@ -1,4 +1,4 @@
-# Human-EYE on Deep Learning
+# Human-eye on Deep Learning
 
 ## Background
 >Hi, all, thanks for your interest.\
@@ -6,8 +6,8 @@ This is my indepedent project at HKUST under supervision of Prof. Huamin Qu duri
 In 2018, we've come to the 5th year landmark of deep learning really starting to hit the mainstream. However, for the majority of people outside the academia, deep learning is still remaining as a mystory, or a black box algorithm. Believing deep learning, a high level algorithm associated with math and computer science, makes much more sense when it is trusted for the whole human community, we make tools to help people visualize and better understand what deep learning is doing about during an image classification task.
 
 ## Summary
-This repo is designed for human-eye to visualize what excatly a CNN network focus on during an image classification task. \
-Further, I would interpret how these visualizer works with CNN architectures, and struggle on better improvement.
+This repo is designed for **human-eye** to visualize what excatly a CNN network focus on during an image classification task. \
+Further, I would **interpret** how these visualizer works with CNN architectures, and struggle for better **improvement**.
 
 - Doing 
     - Organizing CNN visualizer
@@ -16,7 +16,7 @@ Further, I would interpret how these visualizer works with CNN architectures, an
         + Guided BackPropagation(Done)
 - To Do
     - to add `Usage` module in README
-    - to discover why guided BP work better (related to Gabor-like filters, `neuron would be activated the most if the input looks like the weight matrix`)
+    - to discover why guided BP work better (might related to `Gabor-like filters`, in which neuron would be activated the most if the input looks like the weight matrix)
     - to discover ways for guided BP in densenet
     - to seek a way to visualize while training
     - to seek a small dataset containing clear image to train (Removed)
@@ -29,7 +29,7 @@ Further, I would interpret how these visualizer works with CNN architectures, an
 - **Update(10/03/2018)**: Add Saliency Maps demo to Gallery
 - **Update(10/04/2018)**: Add Guided BackPropagation module
 - **Update(10/04/2018)**: Add Guided BackPropagation demo to Gallery
-- **Update(10/05/2018)**: Update Research Map
+- **Update(10/05/2018)**: Update Research Record
 
 
 ## Gallery
