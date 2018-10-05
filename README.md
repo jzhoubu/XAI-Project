@@ -1,4 +1,25 @@
-# Convolutional Neural Network Visualizations
+# Human-EYE on Deep Learning
+
+## Background
+Hi, all, thanks for your guys interest. This is my indepedent project at HKUST under supervision of Prof. Huamin Qu during 2018 Fall. \
+In 2018, we've come to the 5th year landmark of deep learning really starting to hit the mainstream. However, for the majority of people outside the academia, deep learning is still remaining as a mystory, or a black box algorithm. Believing deep learning, a high level algorithm associated with math and computer science, makes much more sense when it is trusted for the whole human community, we make tools to help people visualize and better understand what deep learning is doing about during an image classification task.
+
+## Summary
+This repo is designed for human-eye to visualize what excatly a CNN network focus on during an image classification task. \
+Further, I would interpret how these visualizer works with CNN architectures, and struggle on better improvement.
+
+- Doing 
+    - Organizing CNN visualizer
+        + CAM(Done)
+        + Saliency Maps(Done)
+        + Guided BackPropagation(Done)
+- To Do
+    - to add `Usage` module in README
+    - to discover why guided BP work better (related to Gabor-like filters, `neuron would be activated the most if the input looks like the weight matrix`)
+    - to discover ways for guided BP in densenet
+    - to seek a way to visualize while training
+    - to seek a small dataset containing clear image to train (Removed)
+
 
 ## News
 - **Update(09/29/2018)**: Add Class Activation Maps module
@@ -7,18 +28,8 @@
 - **Update(10/03/2018)**: Add Saliency Maps demo to Gallery
 - **Update(10/04/2018)**: Add Guided BackPropagation module
 - **Update(10/04/2018)**: Add Guided BackPropagation demo to Gallery
+- **Update(10/05/2018)**: Update Research Map
 
-
-## Summary
-- Doing 
-    - Organizing CNN visualizer
-        + CAM(Done)
-        + Saliency Maps(Done)
-        + Guided BackPropagation(Done)
-- To Do
-    - to add README file to VIS package
-    - to seek a small dataset containing clear image to train (removed)
-    - to seek a way to visualize while training
 
 ## Gallery
 
@@ -92,7 +103,7 @@
 </table>
 
 ### Guided BackPropagation  [[Paper](https://arxiv.org/abs/1312.6034)]
-This part of my work is based on [utkuozbulak](https://github.com/utkuozbulak/pytorch-cnn-visualizations)'s work. My contributions are listed as below:
+Some of my codes is implemented based on [utkuozbulak](https://github.com/utkuozbulak/pytorch-cnn-visualizations)'s work. My contributions are listed as below:
 - Fix bugs for up-to-date pytorch version
 - Solve problems for up-to-date CNN model, eg. ResNet, DenseNet
 - Re-organize as a package
