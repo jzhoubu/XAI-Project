@@ -11,6 +11,8 @@ import pdb
 import matplotlib.pyplot as plt
 import warnings
 warnings.filterwarnings("ignore")
+from torch.nn import ReLU
+
 %matplotlib inline
 
 class VIS(object):
@@ -22,14 +24,13 @@ class VIS(object):
         layer_name: name of layer output GAP features
         verbose: verbose mode
     """
-    def __init__(self,image,model,verbose=True,figsize=(18,18),columns=5,topK=4):
+    def __init__(self,image,model,verbose=True,figsize=(18,18),columns=5):
         self.img=image
         self.model=model
+        #self.model.eval()
         self.verbose=True
-        #self.painter={'figsize':(18,18),'heatmap':0.3,'original':0.7,'columns':2,'K':1}\
         self.figsize=figsize
         self.col=columns
-        self.K=topK
         self.output=[image]
         self.fetch() 
 
@@ -48,7 +49,7 @@ class VIS(object):
         self.vprint(" Preprocessing image for imagenet model ".format(self.model))
         preprocess = transforms.Compose([transforms.Resize((224,224)),transforms.ToTensor(),\
                                          transforms.Normalize(mean=[0.485, 0.456, 0.406],std=[0.229, 0.224, 0.225])])
-        self.img_var=Variable(preprocess(self.img).unsqueeze(0))
+        self.img_var=Variable(preprocess(self.img).unsqueeze(0),requires_grad=True)
         self.img=np.array(self.img)
         
     def vprint(self,s):
@@ -69,9 +70,9 @@ class VIS(object):
                 
     def ClassActivationMaps(self,target_layer,topk=4,ratio=0.3,cm=cv2.COLORMAP_JET):
         self.output=[self.img]
-        def hook_feature(module,input,output):
+        def hook_layer(module,input,output):
             self.activation_maps=output.data.cpu().numpy()
-        self.model._modules.get(target_layer).register_forward_hook(hook_feature) # forward
+        self.model._modules.get(target_layer).register_forward_hook(hook_layer) # forward
         self.forward(topk)
         param=list(self.model.parameters())[-2]
         weight_softmax = np.squeeze(param.data.numpy())
@@ -80,25 +81,25 @@ class VIS(object):
         for i in self.idx:
             cam=weight_softmax[i].dot(self.activation_maps.reshape(num_channel,h*w))
             cam=cam.reshape(h,w)
-            cam=(cam-np.min(cam))*1.0/np.max(cam)
+            cam=(cam-np.min(cam))*1.0/np.max(cam) # better
+            #cam=cam-np.min(cam)
+            #cam/=np.max(cam)
             cam=(255*cam).astype(np.uint8)
             heatmap = cv2.applyColorMap(cv2.resize(cam,(_w,_h)), cm)
             result = heatmap*ratio + self.img*(1-ratio)
             result=Image.fromarray(result.astype(np.uint8), 'RGB') # BGR->RGB
             self.output.append(result)
-            
     
     def SaliencyMaps(self,topk=4,cm='hot'):
         self.output=[self.img]
-        img_var=Variable(self.img_var,requires_grad=True)
         self.forward(topk)
         h,w,_ = self.img.shape
-        for idx in self.idx:
-            idx=torch.LongTensor([idx])
-            scores=self.model(img_var)
-            scores=scores.gather(1,Variable(idx).view(-1,1)).squeeze()
-            scores.backward()
-            saliency = img_var.grad.data.abs()
+        for target_class in self.idx:
+            self.model.zero_grad()
+            model_output=self.model(self.img_var)
+            target_output=model_output[0][target_class]
+            target_output.backward()
+            saliency = self.img_var.grad.data.abs()
             saliency, i = torch.max(saliency,dim=1)  
             saliency = saliency.squeeze().numpy()  
             cm = plt.get_cmap(cm)
@@ -107,7 +108,42 @@ class VIS(object):
             saliency=saliency.astype(np.uint8)
             self.output.append(saliency)
 
-    
+    def GuidedBackPropagation(self,topk=1,type='norm'):
+        def hook_function(module, grad_in, grad_out):
+            self.gradients = grad_in[0]
+        update_relus(self.model)
+        #layer = get_specific_layer(self.model,layer_name,n)
+        #layer.register_backward_hook(hook_function)
+        first_layer=[x for x in list(self.model.modules()) if x.__class__.__name__=='Conv2d'][0]
+        first_layer.register_backward_hook(hook_function)
+        self.output=[self.img]
+        self.forward(topk)
+        h,w,_ = self.img.shape
+        for target_class in self.idx:
+            self.model.zero_grad()
+            model_output=self.model(self.img_var)    
+            target_output=model_output[0][target_class]
+            target_output.backward() #gradient=1
+            gradient=self.gradients[0].data.numpy()
+            if type=='norm':
+                gradient-=gradient.min()
+                gradient/=gradient.max()
+                gradient=np.uint8(255*gradient).transpose(1,2,0)
+            elif type=='pos':
+                gradient=np.maximum(0, gradient) / gradient.max()
+                gradient=np.uint8(gradient.transpose(1,2,0)*255)
+            elif type=='neg':
+                gradient=np.maximum(0, -gradient) / -gradient.min()
+                gradient=np.uint8(gradient.transpose(1,2,0)*255)
+            elif type=='gray':
+                gradient=convert_to_grayscale(gradient)
+                self.a=gradient
+                gradient-=gradient.min()
+                gradient/=gradient.max()
+                gradient=np.uint8(255*gradient).transpose(1,2,0)
+                gradient=gradient[:,:,0]
+            self.output.append(gradient)
+                
     def plot(self):
         h,w,_ = self.img.shape
         self.vprint(" Generating images ")
@@ -116,11 +152,7 @@ class VIS(object):
         for i,img in enumerate(self.output):
             plt.subplot(len(self.output) / columns + 1, columns, i + 1)
             plt.axis('off')
-            plt.imshow(img)
-
-if __name__=="__main__":
-    URL='http://img.photobucket.com/albums/v123/tribander_3/New%20Arrivals%20April%2030%202006/IMG_3022.jpg'
-    image = Image.open(io.BytesIO(requests.get(URL).content))
-    vis=VIS(image,'resnet152')
-    vis.ClassActivationMaps('layer4',ratio=0.3)
-    vis.plot()
+            if len(img.shape)==2:
+                plt.imshow(img,cmap='gray')
+            else:
+                plt.imshow(img)
