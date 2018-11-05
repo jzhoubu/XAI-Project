@@ -1,8 +1,9 @@
 # Human-eye on Deep Learning
 
 ## Background
->Hi, all, thanks for your interest.\
-This is my indepedent project at HKUST under supervision of Prof. Huamin Qu during 2018 Fall. \
+Hi, all, thanks for your interest.
+
+This is my indepedent project at HKUST under supervision of Prof. Huamin Qu during 2018 Fall. 
 
 >In 2018, we've come to the 5th year landmark of deep learning really starting to hit the mainstream. However, for the majority of people outside the academia, deep learning is still remaining as a mystory, or a black box algorithm. Believing deep learning, a high level algorithm associated with math and computer science, makes much more sense when it is trusted for the whole human community, we make tools to help people visualize and better understand what deep learning is doing about during an image classification task.
 
