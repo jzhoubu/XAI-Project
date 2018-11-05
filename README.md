@@ -3,7 +3,8 @@
 ## Background
 >Hi, all, thanks for your interest.\
 This is my indepedent project at HKUST under supervision of Prof. Huamin Qu during 2018 Fall. \
-In 2018, we've come to the 5th year landmark of deep learning really starting to hit the mainstream. However, for the majority of people outside the academia, deep learning is still remaining as a mystory, or a black box algorithm. Believing deep learning, a high level algorithm associated with math and computer science, makes much more sense when it is trusted for the whole human community, we make tools to help people visualize and better understand what deep learning is doing about during an image classification task.
+
+>In 2018, we've come to the 5th year landmark of deep learning really starting to hit the mainstream. However, for the majority of people outside the academia, deep learning is still remaining as a mystory, or a black box algorithm. Believing deep learning, a high level algorithm associated with math and computer science, makes much more sense when it is trusted for the whole human community, we make tools to help people visualize and better understand what deep learning is doing about during an image classification task.
 
 ## Summary
 This repo is designed for **human-eye** to visualize what excatly a CNN network focus on during an image classification task. \
@@ -30,7 +31,7 @@ Further, I would **interpret** how these visualizer works with CNN architectures
 - **Update(10/04/2018)**: Add Guided BackPropagation module
 - **Update(10/04/2018)**: Add Guided BackPropagation demo to Gallery
 - **Update(10/05/2018)**: Update Research Record
-
+- **Update(11/05/2018)**: Add a practical case for 5002A3 [[Link](https://github.com/sysu-zjw/MSBD-2018Fall/tree/master/5002/A3)]
 
 ## Gallery
 
@@ -103,7 +104,7 @@ Further, I would **interpret** how these visualizer works with CNN architectures
     </tbody>
 </table>
 
-### Guided BackPropagation  [[Paper](https://arxiv.org/abs/1312.6034)]
+### Guided BackPropagation  [[Paper](https://arxiv.org/pdf/1412.6806.pdf)]
 Some of my codes is implemented based on [utkuozbulak](https://github.com/utkuozbulak/pytorch-cnn-visualizations)'s work. My contributions are listed as below:
 - Fix bugs for up-to-date pytorch version
 - Solve problems for up-to-date CNN model, eg. ResNet, DenseNet
