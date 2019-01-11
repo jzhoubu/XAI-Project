@@ -153,7 +153,7 @@ Some of my codes is implemented based on [utkuozbulak](https://github.com/utkuoz
 URL='https://raw.githubusercontent.com/utkuozbulak/pytorch-cnn-visualizations/master/input_images/snake.jpg'
 image = Image.open(io.BytesIO(requests.get(URL).content))
 vis=VIS(image,'resnet152')   # Class Parameters
-vis.GuidedBackPropagation(type='norm') # Metod Parameters
+vis.GuidedBackPropagation(type='norm') # Method Parameters
 vis.plot()
 ```
 
