@@ -1,3 +1,5 @@
+# 2019/01/11
+
 import torch
 from torchvision import models, transforms
 from torch.nn import functional
@@ -45,58 +47,8 @@ def convert_to_grayscale(cv2im):
     grayscale_im = np.expand_dims(grayscale_im, axis=0)
     return grayscale_im
 
-class VIS(object):
-    """Apply Class Activation Map(CAM) on an image with pre-trained model
-    Attr:
-        img: PIL image
-        model: pre-trained model
-        activation_maps: GAP features
-        layer_name: name of layer output GAP features
-        verbose: verbose mode
-    """
-    def __init__(self,image,model,verbose=True,figsize=(18,18),columns=5):
-        self.img=image
-        self.model=model
-        #self.model.eval()
-        self.verbose=True
-        self.figsize=figsize
-        self.col=columns
-        self.output=[image]
-        self.fetch() 
 
-    def fetch(self):
-        if not isinstance(self.model,str):
-            return 
-        # fetch model
-        self.vprint(" Fetching model <{}> from torchvision ".format(self.model))
-        self.model = eval("models."+self.model+"(pretrained=True)")
-        self.model.eval()
-        # fetch classes
-        self.vprint(" Fetching classes from amazon ")
-        LABELS_URL = 'https://s3.amazonaws.com/outcome-blog/imagenet/labels.json'
-        self.classes = {int(key):value for (key, value) in requests.get(LABELS_URL).json().items()}
-        # process image for any imagenet model
-        self.vprint(" Preprocessing image for imagenet model ".format(self.model))
-        preprocess = transforms.Compose([transforms.Resize((224,224)),transforms.ToTensor(),\
-                                         transforms.Normalize(mean=[0.485, 0.456, 0.406],std=[0.229, 0.224, 0.225])])
-        self.img_var=Variable(preprocess(self.img).unsqueeze(0),requires_grad=True)
-        self.img=np.array(self.img)
-        
-    def vprint(self,s):
-        if self.verbose:
-            print("####{:#<50}####".format(s))
-            
-    def forward(self,topk,v=True,):
-        self.vprint(" Predicting image ")
-        logit = self.model(self.img_var)
-        self.logit = self.model(self.img_var)###
-        h_x=functional.softmax(logit, dim=1).data.squeeze()
-        probs, idx = h_x.sort(0, True)
-        idx=idx.numpy()
-        self.idx=idx[0:topk]
-        if self.verbose and v:
-            for i in range(0,topk):
-                print('  {:.3f} -> {}'.format(probs[i], self.classes[idx[i]]))
+
                 
 class VIS(object):
     """Apply Class Activation Map(CAM) on an image with pre-trained model
