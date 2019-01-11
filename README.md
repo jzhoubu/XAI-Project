@@ -1,8 +1,7 @@
 # Human-eye on Deep Learning
 
 ## Background
-Hi, all, thanks for your interest.
-
+> Hi, all, thanks for your interest.\
 This is my indepedent project at HKUST under supervision of Prof. Huamin Qu during 2018 Fall. 
 
 >In 2018, we've come to the 5th year landmark of deep learning really starting to hit the mainstream. However, for the majority of people outside the academia, deep learning is still remaining as a mystory, a black box algorithm.\
@@ -10,20 +9,7 @@ Believing deep learning makes much more sense only when it is trusted for the wh
 
 ## Summary
 This repo is designed for **human-eye** to visualize what excatly a CNN network focus on during an image classification task. \
-Further, I would **interpret** how these visualizer works with CNN architectures, and struggle for better **improvement**.
-
-- Doing 
-    - Organizing CNN visualizer
-        + CAM(Done)
-        + Saliency Maps(Done)
-        + Guided BackPropagation(Done)
-- To Do
-    - to add `Usage` module in README
-    - to discover why guided BP work better (might related to `Gabor-like filters`, in which neuron would be activated the most if the input looks like the weight matrix)
-    - to discover ways for guided BP in densenet
-    - to seek a way to visualize while training
-    - to seek a small dataset containing clear image to train (Removed)
-
+`VIS`  is a tool which helps people visualize features inseide CNN model. This package include three advanced methods: `ClassActivationMaps`, `SaliencyMaps`, and `GuidedBackPropagation`. 
 
 ## News
 - **Update(09/29/2018)**: Add Class Activation Maps module
@@ -159,9 +145,40 @@ Some of my codes is implemented based on [utkuozbulak](https://github.com/utkuoz
     </tbody>
 </table>
 
+# Usage
 
 
-## Related Work
+
+```ruby
+URL='https://raw.githubusercontent.com/utkuozbulak/pytorch-cnn-visualizations/master/input_images/snake.jpg'
+image = Image.open(io.BytesIO(requests.get(URL).content))
+vis=VIS(image,'resnet152')   # Class Parameters
+vis.GuidedBackPropagation(type='norm') # Metod Parameters
+vis.plot()
+```
+
+```
+Class Parameters:
+  --image        input image, required PIL image object
+  --model       CNN model,  if string, use a pretrained model from torchvision 
+  --verbose       bool, whether print information during processing
+  --figsize       output figure size, default (18,18)
+  --columns        output display columns number, default 5
+
+Metod Parameters:
+    ClassActivationMaps
+        --topk        number k of topk prediction, default 4
+        --ratio        ratio of heatmap against original image, default 0.3
+        --cm       type of heatmap, default cv2.COLORMAP_JET
+    SaliencyMaps
+        --topk        number k of topk prediction, default 4
+        --cm       type of colormap, default 'hot'
+    GuidedBackPropagation
+        --topk        number k of topk prediction, default 4
+        --type        type of gradient to pass through, default 'norm'.
+```
+
+## Reference
 [utkuozbulak/pytorch-cnn-visualizations](https://github.com/utkuozbulak/pytorch-cnn-visualizations)
 
 [Sample code for the Class Activation Mapping](https://github.com/metalbubble/CAM)
